@@ -13,6 +13,10 @@ app.use(cors());
 
 app.use(express.json())
 
+app.get('/',(req,res)=>{
+    res.send("hello world")
+})
+
 app.post('/email', (req, res, next) => {
     console.log('reqested')
     const { name, email, message } = req.body
